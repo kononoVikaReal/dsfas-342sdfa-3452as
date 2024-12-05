@@ -15,8 +15,9 @@ public class Main {
 
     public static boolean checkAgeForUsers(List<User> users) {
         Stream<User> usersStream = users.stream();
-        long res = usersStream.filter(User -> User.getAge() > 7).count();
-        return res == users.size();
+        //long res = usersStream.filter(User -> User.getAge() > 7).count();
+        //return res == users.size();
+        return usersStream.allMatch(User -> User.getAge() > 7);
     }
 
     public static double averageAge(List<User> users) {

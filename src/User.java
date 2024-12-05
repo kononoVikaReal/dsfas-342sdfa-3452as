@@ -31,7 +31,7 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        return Integer.compare(this.id, o.getId());
+        return Integer.compare(this.id, o.id);
     }
 
     @Override
